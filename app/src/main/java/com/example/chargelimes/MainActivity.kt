@@ -204,7 +204,8 @@ class MainActivity : ComponentActivity() {
                         httpOnUrl = value
                         sharedPreferences.edit().putString("httpOnUrl", value).apply()
                     },
-                    label = { Text("HTTP On URL") }
+                    label = { Text("HTTP On URL") },
+                    modifier = Modifier.fillMaxWidth() // Add this line
                 )
 
                 OutlinedTextField(
@@ -213,8 +214,10 @@ class MainActivity : ComponentActivity() {
                         httpOffUrl = value
                         sharedPreferences.edit().putString("httpOffUrl", value).apply()
                     },
-                    label = { Text("HTTP Off URL") }
+                    label = { Text("HTTP Off URL") },
+                    modifier = Modifier.fillMaxWidth() // Add this line
                 )
+
             }
         }
     }
